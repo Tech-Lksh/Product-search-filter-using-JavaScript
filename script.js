@@ -4,12 +4,12 @@ const products = document.querySelectorAll(".product");
 searchInput.addEventListener("keyup", function () {
   let filter = searchInput.value.toLowerCase();
 
-  products.forEach((product) => {
-    let productName = product.querySelector("h3").textContent.toLowerCase();
+  products.forEach((dets) => {
+    let productName = dets.querySelector("h3").textContent.toLowerCase();
     if (productName.includes(filter)) {
-      product.classList.remove("hidden");
+      dets.classList.remove("hidden");
     } else {
-      product.classList.add("hidden");
+      dets.classList.add("hidden");
     }
   });
 });
